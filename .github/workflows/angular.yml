@@ -20,9 +20,9 @@ jobs:
     - run: echo "******************************************************"     
     - run: git remote -v     
     - run: ls  -R $GITHUB_WORKSPACE/ -Inode_modules -Isrc 
-    - run: cp -a $GITHUB_WORKSPACE/dist/${{ github.event.repository.name }}/. $GITHUB_WORKSPACE/docs
+    - run: cp -a $GITHUB_WORKSPACE/dist/${{ github.event.repository.name }}/. $GITHUB_WORKSPACE/
     - run: git status
-    - run: git add $GITHUB_WORKSPACE/docs/
+    - run: git add $GITHUB_WORKSPACE/
     - run: git status
     - run: ls  -R $GITHUB_WORKSPACE/ -Inode_modules -Isrc 
     - run: pwd
@@ -34,7 +34,7 @@ jobs:
         push-branch: 'master'
         commit-message: 'build files'
         force-add: 'true'
-        files: /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/docs/
+        files: /home/runner/work/${{ github.event.repository.name }}/${{ github.event.repository.name }}/
         name: Mateen
         email: makjavaprogrammer@gmail.com 
     
