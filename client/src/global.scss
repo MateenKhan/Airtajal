@@ -24,3 +24,29 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+ion-item-divider {
+    --background: #19422d;
+    --color: #fff;
+    padding: 1%;
+    margin: 1% 0% 1%;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+ion-icon {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%, 50%);
+}
+
+
+.b-r {
+    --border-radius: 14px;
+}
+
+
+._2rem {
+    font-size: 2rem;
+}

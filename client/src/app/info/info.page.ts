@@ -13,6 +13,7 @@ export class InfoPage implements OnInit {
   public destination_unit = "in";
   public source_value = 1;
   public destination_value = 12;
+  private apk_url = "https://github.com/MateenKhan/Airtajal_Apps/raw/master/app-release.apk";
 
   constructor(private storage: Storage, private toastController: ToastController) { }
 
@@ -51,5 +52,9 @@ export class InfoPage implements OnInit {
         }
         break;
     }
+  }
+
+  downloadApk(){
+    window.open(this.apk_url, "_blank");
   }
 }
