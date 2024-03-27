@@ -6,12 +6,13 @@ export class Customer {
     public name = "";
     public phone = "";
     public _items: [item] = [new item()];
-    public _3d_sheets = "";
-    public _2d_sheets = "";
+
     public area = 0;
     public area_price = 0;
     public price = 0;
     public start_date !: string;
     public end_date !: string;
+    public total_plywood_sheets!: number;
+    public plywood_sheet_wastage!: number;
     constructor() { }
 }

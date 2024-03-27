@@ -5,7 +5,6 @@ export class item {
     public name = "";
     public _2d_arr: [_2d] = [new _2d()];
     public _3d_arr: [_3d] = [new _3d()];
-    public material = "";
     public area = 0;
     constructor() { }
 }

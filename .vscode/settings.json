@@ -1,3 +1,24 @@
 {
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "java.jdt.ls.java.home": "",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-21",
+            "path": "C:\\Program Files\\OpenLogic\\jdk-21.0.3.1-hotspot",
+            "default": true
+        }
+    ],
+    "java.completion.importOrder": [
+        "java",
+        "#",
+        "javax",
+        "org",
+        "com",
+        ""
+    ],
+    "java.classPath": [
+        "C:\\Program Files\\OpenLogic\\jdk-21.0.3.1-hotspot\\lib"
+    ],
+    "java.import.generatesMetadataFilesAtProjectRoot": true
 }
