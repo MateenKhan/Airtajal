@@ -31,7 +31,7 @@
       </ion-item>
       <div class="ion-padding items-content" slot="content">
         <!--3d start-->
-        <ion-accordion-group>
+        <!-- <ion-accordion-group>
           <ion-accordion value="{{_3d_ctr}}" *ngFor="let _3d of item._3d_arr;let _3d_ctr = index">
             <ion-item slot="header" color="light">
               <ion-label>{{ (_3d_ctr+1) + "." + (_3d.name?_3d.name:"")}}</ion-label>
@@ -108,7 +108,7 @@
 
             </div>
           </ion-accordion>
-        </ion-accordion-group>
+        </ion-accordion-group> -->
         <!--3d end-->
         <!--2d start-->
         <ion-accordion-group>
@@ -215,22 +215,22 @@
         <!--2d end-->
 
         <ion-row>
-          <ion-col size-xs="4" (click)="add3dItem(customer._items,item_ctr)">
+          <ion-col size-xs="6" (click)="add3dItem(customer._items,item_ctr)">
             <ion-item class="b-r ion-no-padding ion-activatable " color="success">
-              <ion-icon name="add"></ion-icon>
-              <ion-label class="icon-label">3d</ion-label>
+              <ion-icon name="add-circle"></ion-icon>
+              <!-- <ion-label class="icon-label">+</ion-label> -->
               <ion-ripple-effect type="unbounded"></ion-ripple-effect>
             </ion-item>
           </ion-col>
-          <ion-col size-xs="4" (click)="add2dItem(customer._items,item_ctr)">
+          <!-- <ion-col size-xs="4" (click)="add2dItem(customer._items,item_ctr)">
             <ion-item class="b-r ion-no-padding ion-activatable " color="primary">
               <ion-icon name="add"></ion-icon>
               <ion-label class="icon-label">2d</ion-label>
               <ion-ripple-effect type="unbounded"></ion-ripple-effect>
             </ion-item>
-          </ion-col>
+          </ion-col> -->
 
-          <ion-col size-xs="4" (click)="deleteItem(customer._items,item_ctr)">
+          <ion-col size-xs="6" (click)="deleteItem(customer._items,item_ctr)">
             <ion-item class="b-r ion-no-padding ion-activatable " color="danger">
               <ion-icon name="trash"></ion-icon>
               <ion-ripple-effect type="unbounded"></ion-ripple-effect>
@@ -246,8 +246,8 @@
   <ion-row>
     <ion-col size-xs="4" (click)="addItem()">
       <ion-item class="b-r ion-no-padding ion-activatable " color="warning">
-        <ion-icon name="add"></ion-icon>
-        <ion-label class="icon-label">Item</ion-label>
+        <ion-icon name="add-circle"></ion-icon>
+        <!-- <ion-label class="icon-label">Item</ion-label> -->
         <ion-ripple-effect type="unbounded"></ion-ripple-effect>
       </ion-item>
     </ion-col>
@@ -291,13 +291,23 @@
   <!--date end-->
 
   <!--price start-->
+  
   <ion-accordion-group>
     <ion-accordion value="Price">
       <ion-item slot="header" color="light">
         <ion-label>Price : {{customer.price}}</ion-label>
+        
       </ion-item>
+      
+      
       <div class="ion-padding" slot="content">
         <ion-row>
+          <ion-col size-xs="3">
+              <ion-item class="b-r ion-no-padding ion-activatable " (click)="completeAreaCalculate()" color="primary">
+                <ion-icon size="large" name="calculator"></ion-icon>
+                <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+              </ion-item>
+          </ion-col>
           <ion-col size-xs="3">
             <ion-input label="Area" readonly="true" labelPlacement="stacked" [(ngModel)]="customer.area"
               placeholder="area"></ion-input>
@@ -319,19 +329,14 @@
   <!--save start-->
   <ion-row>
 
-    <ion-col id="open-toast" size-xs="4" (click)="save()">
+    <ion-col id="open-toast" size-xs="6" (click)="save()">
       <ion-item class="b-r ion-no-padding ion-activatable " color="success">
         <ion-icon size="large" name="save"></ion-icon>
         <ion-ripple-effect type="unbounded"></ion-ripple-effect>
       </ion-item>
     </ion-col>
-    <ion-col size-xs="4">
-      <ion-item class="b-r ion-no-padding ion-activatable " (click)="completeAreaCalculate()" color="primary">
-        <ion-icon size="large" name="calculator"></ion-icon>
-        <ion-ripple-effect type="unbounded"></ion-ripple-effect>
-      </ion-item>
-    </ion-col>
-    <ion-col size-xs="4" (click)="delete()">
+    
+    <ion-col size-xs="6" (click)="delete()">
       <ion-item class="b-r ion-no-padding ion-activatable " color="danger">
         <ion-icon size="large" name="trash"></ion-icon>
         <ion-ripple-effect type="unbounded"></ion-ripple-effect>

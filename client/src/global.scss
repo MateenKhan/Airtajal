@@ -25,6 +25,17 @@
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
 
+
+body{
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.divider{
+    margin:0.5rem;
+}
+
 ion-item-divider {
     --background: #19422d;
     --color: #fff;
@@ -34,12 +45,13 @@ ion-item-divider {
     font-size: xx-large;
 }
 
-ion-icon {
-    position: absolute;
-    bottom: 50%;
-    right: 50%;
-    transform: translate(50%, 50%);
-}
+// ion-icon {
+//     position: absolute;
+//     // bottom: 50%;
+//     right: 50%;
+//     // transform: translate(50%, 50%);
+//     font-size: 2.3rem;
+// }
 
 
 .b-r {
