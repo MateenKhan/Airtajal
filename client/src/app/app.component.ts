@@ -9,6 +9,7 @@ export class AppComponent {
     { title: 'Estimate', url: '/estimate/calculate', icon: 'calculator' },
     { title: 'Information', url: '/info', icon: 'alert-circle' },
     { title: 'Invoice', url: '/invoice', icon: 'cash-outline' },
+    { title: 'Customer', url: '/customer', icon: 'cash-outline' }
     // { title: 'Favorites', url: '/folder/favorites', icon: 'heart' },
     // { title: 'Archived', url: '/folder/archived', icon: 'archive' },
     // { title: 'Trash', url: '/folder/trash', icon: 'trash' },
