@@ -10,8 +10,8 @@
             <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
               routerLinkActive="selected">
               <!-- <ion-icon aria-hidden="true" slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon> -->
-              <ion-icon class="ion-no-margin" aria-hidden="true" slot="start" [ios]="p.icon " [md]="p.icon "></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+              <ion-icon class="ion-no-margin" aria-hidden="true" slot="start" [ios]="p.icon " [md]="p.icon " [color]="p.color"></ion-icon>
+              <ion-label><pre>  {{ p.title }}</pre></ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

@@ -3,7 +3,7 @@ import { Storage } from '@ionic/storage-angular';
 import { ToastController } from '@ionic/angular';
 import { item } from '../estimate/models/item';
 import { _2d } from '../estimate/models/_2d';
-import { temp_item } from '../estimate/models/temp_item';
+import { custom_object } from '../estimate/models/custom_object';
 
 @Component({
   selector: 'app-invoice',
@@ -12,7 +12,7 @@ import { temp_item } from '../estimate/models/temp_item';
 })
 export class InvoicePage implements OnInit {
 
-  public items:temp_item[] = [
+  public items:custom_object[] = [
     {id:1,name:"cuboard",price:20000,selected:true},
     {id:2,name:"counter",price:12000,selected:true},
     {id:2,name:"boss conuter",price:12500,selected:true},
