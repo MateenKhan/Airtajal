@@ -1,0 +1,17 @@
+<div class="product-page">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Product Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="product-details">
+      <img [src]="product.image" alt="{{ product.name }}" />
+      <h2>{{ product.name }}</h2>
+      <p>{{ product.description }}</p>
+      <h3>Price: {{ product.price | currency }}</h3>
+      <ion-button (click)="addToCart(product)">Add to Cart</ion-button>
+    </div>
+  </ion-content>
+</div>
