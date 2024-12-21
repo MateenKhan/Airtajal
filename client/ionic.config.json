@@ -1,8 +1,0 @@
-{
-  "name": "CarpenteryService",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular",
-  "id": "634b881c"
-}
