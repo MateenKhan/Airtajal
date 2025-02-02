@@ -19,4 +19,9 @@ jobs:
     #   if: success()
     # - run: echo "******************************************************"     
     # - run: git remote -v     
+    
     - run: ls  -R $GITHUB_WORKSPACE
+    - run: cd $GITHUB_WORKSPACE/commerce-app/ui
+    - run: npm install
+    - run: npm run build
+    - run: pwd
