@@ -22,6 +22,7 @@ jobs:
     
     - run: ls  -R $GITHUB_WORKSPACE
     - run: cd $GITHUB_WORKSPACE/ecommerce-app/ui
+      if: success()
     - run: npm install
     - run: npm run build
     - run: pwd
