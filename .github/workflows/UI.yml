@@ -20,6 +20,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+    - run: cd ecommerce-app
+    - run: cd ui
     - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v4
@@ -27,8 +29,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
-    - run: cd ecommerce-app
-    - run: cd ui
+
     - run: npm run build --if-present
 
     
