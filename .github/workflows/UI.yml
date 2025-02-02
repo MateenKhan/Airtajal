@@ -12,11 +12,11 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
-      with:
-        node-version: '16'
-    - run: npm install
-    - run: npm run build
-      if: success()
-    - run: echo "******************************************************"     
-    - run: git remote -v     
+    #   with:
+    #     node-version: '16'
+    # - run: npm install
+    # - run: npm run build
+    #   if: success()
+    # - run: echo "******************************************************"     
+    # - run: git remote -v     
     - run: ls  -R $GITHUB_WORKSPACE
