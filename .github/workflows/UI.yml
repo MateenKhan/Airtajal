@@ -1,16 +1,22 @@
+name: angular build and push
 on:
-  push:
-    branches:
-      - "default" 
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
+  workflow_dispatch:
+  push: 
+    branches: default
+    
+    
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+
     steps:
-    - id: build-publish
-      uses: bitovi/github-actions-angular-to-github-pages@v1.0.0
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+    - run: npm install
+    - run: npm run build
+      if: success()
+    - run: echo "******************************************************"     
+    - run: git remote -v     
+    - run: ls  -R $GITHUB_WORKSPACE
