@@ -26,6 +26,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+
+    - run: cd ecommerce-app
+    - run: cd ui
     - run: npm run build --if-present
 
     
