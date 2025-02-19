@@ -7,21 +7,14 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { UserService } from '../../services/user.service';
-
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [RouterModule, RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule],
+  imports: [ RouterModule, RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnDestroy{
-
-  
-  protected readonly fillerNav = Array.from({ length: 50 }, (_, i) => `Nav Item ${i + 1}`);
-
-  protected readonly fillerContent = Array.from({ length: 50 }, (_, i) => `Body  ${i + 1}`);
-
   protected readonly isMobile = signal(true);
   public isUserLoggedIn = false;
   private readonly _mobileQuery: MediaQueryList;

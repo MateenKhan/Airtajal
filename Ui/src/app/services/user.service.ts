@@ -11,7 +11,7 @@ export class UserService {
   public pagesList = [
     {
       title:"Users",
-      route:"/users",
+      route:"/home/users",
       user:"owner"
     },
     {

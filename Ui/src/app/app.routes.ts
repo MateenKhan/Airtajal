@@ -5,10 +5,15 @@ import { HomeComponent } from './components/home/home.component';
 import { UserComponent } from './components/user/user.component';
 
 export const routes: Routes = [
-    { path: 'login', component: LoginComponent },
-    { path: 'signup', component: SignupComponent },
-    { path: 'home', component: HomeComponent },
-    { path: 'users', component: UserComponent },
-    { path: '',   redirectTo: '/login', pathMatch: 'full' }, 
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  {
+    path: 'home', component: HomeComponent,
+    children: [
+      { path: 'users', component: UserComponent },
+      { path: '', redirectTo: 'users', pathMatch: 'full' }
+    ]
+  },
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
 
-  ];
+];

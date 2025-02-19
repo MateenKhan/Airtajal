@@ -13,6 +13,7 @@
         @for (page of userService.pagesList; track page) {
           <a mat-list-item [routerLink]="[page.route]">{{page.title}}</a>
         }
+        <a mat-list-item [routerLink]="['/login']">Logout</a>
       </mat-nav-list>
     </mat-sidenav>
 
