@@ -1,0 +1,38 @@
+<!-- <mat-grid-list cols="1" rows="1" rowHeight="2:1">
+  <mat-grid-tile> -->
+<mat-card class="login-card" appearance="outlined">
+  <mat-card-header class="w-100 p-40"><mat-card-title>Login</mat-card-title></mat-card-header>
+  <mat-card-content class="w-100 p-40">
+
+    <div [formGroup]="form">
+
+      <div>
+        <mat-form-field>
+          <mat-label>Phone number</mat-label>
+          <example-tel-input formControlName="tel" required></example-tel-input>
+          <mat-icon matSuffix>phone</mat-icon>
+          <mat-hint>Dont Include area code</mat-hint>
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Enter your password</mat-label>
+          <input matInput [type]="hide() ? 'password' : 'text'" />
+          <button mat-icon-button matSuffix (click)="clickEvent($event)" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()">
+            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+
+      <div class="action-buttons">
+        <button (click)="submitForm()" mat-flat-button class="m-r-1">Submit</button>
+        <button mat-raised-button class="m-r-1">Cancel</button>
+      </div>
+
+
+    </div>
+  </mat-card-content>
+</mat-card>
+<!-- </mat-grid-tile>
+</mat-grid-list> -->
