@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Component} from '@angular/core';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +10,12 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'Ui';
+  
+  public isUserLoggedIn = false;
+  
+  constructor(public userService: UserService) {
+    this.isUserLoggedIn = userService.isUserLoggedIn;
+    
+  }
+
 }

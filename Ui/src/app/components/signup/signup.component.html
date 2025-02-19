@@ -1,0 +1,61 @@
+<mat-grid-list cols="11" rowHeight="80vh">
+    <mat-grid-tile [colspan]=1></mat-grid-tile>
+    <mat-grid-tile [colspan]=9>
+        <mat-card class="example-card" appearance="outlined">
+            <mat-card-header>
+                <mat-card-title>Signup</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Full Name</mat-label>
+                        <input matInput placeholder="Jhon Doe">
+                        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Phone</mat-label>
+                        <input matInput placeholder="9874563210">
+                        <mat-icon matSuffix>phone_enabled</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Enter your password</mat-label>
+                        <input matInput [type]="hide() ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Re-Enter your password</mat-label>
+                        <input matInput [type]="hide() ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+
+
+                <div class="pb-16">
+                        <button mat-raised-button>Signup</button>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <button mat-flat-button>Reset</button>
+
+                </div>
+                <div>
+                    <button [routerLink]="['/login']" mat-fab extended>Existing User ? Login.</button>
+                    
+                </div>
+
+            </mat-card-content>
+
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]=1></mat-grid-tile>
+</mat-grid-list>
