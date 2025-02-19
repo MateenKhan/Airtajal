@@ -1,4 +1,4 @@
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet,RouterModule } from '@angular/router';
 import { MediaMatcher } from '@angular/cdk/layout';
 import { Component, OnDestroy, inject, signal } from '@angular/core';
 import { MatListModule } from '@angular/material/list';
@@ -11,7 +11,7 @@ import { UserService } from '../../services/user.service';
 @Component({
   standalone: true,
   selector: 'app-home',
-  imports: [RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule],
+  imports: [RouterModule, RouterOutlet, MatToolbarModule, MatButtonModule, MatIconModule, MatSidenavModule, MatListModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

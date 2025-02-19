@@ -33,3 +33,11 @@
   }
   
   /*side nav css end*/
+  .mat-drawer-side{
+    background: var(--mdc-fab-container-color, var(--mat-sys-primary-container));
+  }
+  a.mat-mdc-list-item.mdc-list-item:hover {
+    
+    // background: var(--mdc-fab-container-color, var(--mat-sys-primary-container))
+  }
+  
