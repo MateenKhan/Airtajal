@@ -17,24 +17,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './signup.component.scss',
   imports: [RouterModule, MatGridListModule, MatDividerModule, MatButtonModule, MatCardModule, MatChipsModule, MatProgressBarModule, MatFormFieldModule, MatIconModule, MatInputModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
-
-
 })
 export class SignupComponent {
   hide = signal(true);
-
   constructor(private router:RouterModule){}
-
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide());
     event.stopPropagation();
   }
-
-  longText = `The Chihuahua is a Mexican breed of toy dog. It is named for the
-  Mexican state of Chihuahua and is among the smallest of all dog breeds. It is
-  usually kept as a companion animal or for showing.`;
-
-  login(){
-    // this.router.
-  }
+  
 }
